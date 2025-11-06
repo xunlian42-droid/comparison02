@@ -1,0 +1,24 @@
+<a href="{% url 'home:index' %}">ホームに戻る</a>
+<hr>
+
+<!-- templates/calculator/bmi_record_list_edit_delete.html の冒頭などに追加 -->
+{% if messages %}
+<ul>
+    {% for message in messages %}
+    <li>
+        {{ message }}
+    </li>
+    {% endfor %}
+</ul>
+{% endif %}
+
+
+<h2>登録済みBMI一覧</h2>
+<ul>
+    {% for r in records %}
+    <li>{{ r.simei }}: {{ r.height }}cm / {{ r.weight }}kg → BMI: {{ r.bmi }}
+        [<a href="{% url 'calculator:bmi_record_edit' r.id %}">編集</a>]
+        [<a href="{% url 'calculator:bmi_record_delete' r.id %}">削除</a>]
+    </li>
+    {% endfor %}
+</ul>

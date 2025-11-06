@@ -1,0 +1,48 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #f9f9fc;
+    color: #333;
+    padding: 1.5rem;
+    line-height: 1.6;
+}
+
+h3 {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    border-bottom: 1px solid #ccc;
+    padding-bottom: 0.3rem;
+}
+
+ul {
+    margin: 0.5rem 0 1rem 1rem;
+}
+
+.tag-item {
+    display: inline-block;
+    background: #e0f0ff;
+    color: #0366d6;
+    padding: 0.3rem 0.6rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.tag-item:hover {
+    background: #cce4ff;
+}
+
+
+.result-item a {
+    color: #444;
+    text-decoration: none;
+}
+
+.result-item a:hover {
+    text-decoration: underline;
+}
+
+input#search-box {
+    width: 100%;
+    padding: 0.5rem;
+}

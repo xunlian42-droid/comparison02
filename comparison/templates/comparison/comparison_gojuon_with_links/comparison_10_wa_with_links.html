@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+{% load static %}
+
+<head>
+  <meta charset="utf-8" />
+  <title>U-NEXT × dアニメ配信比較表</title>
+  <link rel="stylesheet" href="{% static 'comparison/tags_style/comparison_style.css' %}">
+  <style>
+
+  </style>
+</head>
+
+<body>
+  <h1>U-NEXT × dアニメ配信比較表</h1>
+  <table class="mark01">
+    <tr>
+      <th>配信あり：◎</th>
+      <th>配信なし：✖</th>
+    </tr>
+  </table>
+  <table class="mark02">
+    <thead>
+      <tr>
+        <th>作品タイトル</th>
+        <th>dアニメストア</th>
+        <th>U-NEXT</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr id="ONE_OUTS">
+        <td><a class="title-link" data-id="ONE_OUTS">ONE OUTS</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21679"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0075176" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_OUTS_ワンナウツ_">
+        <td><a class="title-link" data-id="ONE_OUTS_ワンナウツ_">ONE OUTS-ワンナウツ-</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030390" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE">
+        <td><a class="title-link" data-id="ONE_PIECE">ONE PIECE</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0011124" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_FAN_LETTER">
+        <td><a class="title-link" data-id="ONE_PIECE_FAN_LETTER">ONE PIECE FAN LETTER</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27402"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0158790" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_FILM_GOLD">
+        <td><a class="title-link" data-id="ONE_PIECE_FILM_GOLD">ONE PIECE FILM GOLD</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0027496" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_FILM_RED">
+        <td><a class="title-link" data-id="ONE_PIECE_FILM_RED">ONE PIECE FILM RED</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=26987"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0099619" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_FILM_STRONG_WORLD">
+        <td><a class="title-link" data-id="ONE_PIECE_FILM_STRONG_WORLD">ONE PIECE FILM STRONG WORLD</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0012959" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_FILM_Z">
+        <td><a class="title-link" data-id="ONE_PIECE_FILM_Z">ONE PIECE FILM Z</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0013519" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_STAMPEDE">
+        <td><a class="title-link" data-id="ONE_PIECE_STAMPEDE">ONE PIECE STAMPEDE</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0046128" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_THE_MOVIE_オマツリ男爵と秘密の島">
+        <td><a class="title-link" data-id="ONE_PIECE_THE_MOVIE_オマツリ男爵と秘密の島">ONE PIECE THE MOVIE オマツリ男爵と秘密の島</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0011129" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_THE_MOVIE_カラクリ城のメカ巨兵">
+        <td><a class="title-link" data-id="ONE_PIECE_THE_MOVIE_カラクリ城のメカ巨兵">ONE PIECE THE MOVIE カラクリ城のメカ巨兵</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0012956" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_THE_MOVIE_デッドエンドの冒険">
+        <td><a class="title-link" data-id="ONE_PIECE_THE_MOVIE_デッドエンドの冒険">ONE PIECE THE MOVIE デッドエンドの冒険</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0011127" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_エピソード_オブ_アラバスタ_砂漠の王女と海賊たち">
+        <td><a class="title-link" data-id="ONE_PIECE_エピソード_オブ_アラバスタ_砂漠の王女と海賊たち">ONE PIECE エピソード オブ アラバスタ 砂漠の王女と海賊たち</a>
+        </td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0012957" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_エピソード_オブ_チョッパー__冬に咲く_奇跡の桜">
+        <td><a class="title-link" data-id="ONE_PIECE_エピソード_オブ_チョッパー__冬に咲く_奇跡の桜">ONE PIECE エピソード オブ チョッパー+ 冬に咲く、奇跡の桜</a>
+        </td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0012958" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_ねじまき島の冒険">
+        <td><a class="title-link" data-id="ONE_PIECE_ねじまき島の冒険">ONE PIECE ねじまき島の冒険</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0011125" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_呪われた聖剣">
+        <td><a class="title-link" data-id="ONE_PIECE_呪われた聖剣">ONE PIECE 呪われた聖剣</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0011128" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_珍獣島のチョッパー王国">
+        <td><a class="title-link" data-id="ONE_PIECE_珍獣島のチョッパー王国">ONE PIECE 珍獣島のチョッパー王国</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0011126" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_PIECE_麦わらチェイス">
+        <td><a class="title-link" data-id="ONE_PIECE_麦わらチェイス">ONE PIECE 麦わらチェイス</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0100141" target="_blank">◎</a></td>
+      </tr>
+      <tr id="One_Room">
+        <td><a class="title-link" data-id="One_Room">One Room</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21361"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0027872" target="_blank">◎</a></td>
+      </tr>
+      <tr id="One_Room_サードシーズン">
+        <td><a class="title-link" data-id="One_Room_サードシーズン">One Room サードシーズン</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24741"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0052044" target="_blank">◎</a></td>
+      </tr>
+      <tr id="One_Room_セカンドシーズン">
+        <td><a class="title-link" data-id="One_Room_セカンドシーズン">One Room セカンドシーズン</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22271"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0035979" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ONE_輝く季節へ_">
+        <td><a class="title-link" data-id="ONE_輝く季節へ_">ONE～輝く季節へ～</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11014"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0003278" target="_blank">◎</a></td>
+      </tr>
+      <tr id="OVA_WILD_ADAPTER_">
+        <td><a class="title-link" data-id="OVA_WILD_ADAPTER_">OVA「WILD ADAPTER」</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25239"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0065006" target="_blank">◎</a></td>
+      </tr>
+      <tr id="W3">
+        <td><a class="title-link" data-id="W3">W3</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11454"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0002389" target="_blank">◎</a></td>
+      </tr>
+      <tr id="WACHA_WACHA_THE_MOVIE">
+        <td><a class="title-link" data-id="WACHA_WACHA_THE_MOVIE">WACHA WACHA THE MOVIE</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0065942" target="_blank">◎</a></td>
+      </tr>
+      <tr id="WONDERER">
+        <td><a class="title-link" data-id="WONDERER">WONDERER</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0147739" target="_blank">◎</a></td>
+      </tr>
+      <tr id="WORKING__">
+        <td><a class="title-link" data-id="WORKING__">WORKING!!</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10876"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="WORKING___">
+        <td><a class="title-link" data-id="WORKING___">WORKING!!!</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20222"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="WORKING___">
+        <td><a class="title-link" data-id="WORKING___">WORKING’!!</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11582"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="WWW_WORKING__">
+        <td><a class="title-link" data-id="WWW_WORKING__">WWW.WORKING!!</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21164"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワイルド7_another_謀略運河">
+        <td><a class="title-link" data-id="ワイルド7_another_謀略運河">ワイルド7 another 謀略運河</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10284"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0044487" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワオっち_ショートアニメ">
+        <td><a class="title-link" data-id="ワオっち_ショートアニメ">ワオっち！ショートアニメ</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0054398" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワカコ酒">
+        <td><a class="title-link" data-id="ワカコ酒">ワカコ酒</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20233"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わかば_ガール">
+        <td><a class="title-link" data-id="わかば_ガール">わかば＊ガール</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20229"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0019042" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワガママハイスペック">
+        <td><a class="title-link" data-id="ワガママハイスペック">ワガママハイスペック</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20893"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0067813" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わがまま_フェアリー_ミルモでポン_">
+        <td><a class="title-link" data-id="わがまま_フェアリー_ミルモでポン_">わがまま☆フェアリー　ミルモでポン！</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0032912" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わがまま_フェアリー_ミルモでポン__ごおるでん">
+        <td><a class="title-link" data-id="わがまま_フェアリー_ミルモでポン__ごおるでん">わがまま☆フェアリー　ミルモでポン！　ごおるでん</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0032913" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わがまま_フェアリー_ミルモでポン__ちゃあみんぐ">
+        <td><a class="title-link" data-id="わがまま_フェアリー_ミルモでポン__ちゃあみんぐ">わがまま☆フェアリー　ミルモでポン！　ちゃあみんぐ</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0032915" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わがまま_フェアリー_ミルモでポン__わんだほう">
+        <td><a class="title-link" data-id="わがまま_フェアリー_ミルモでポン__わんだほう">わがまま☆フェアリー　ミルモでポン！　わんだほう</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0032914" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わが青春のアルカディア">
+        <td><a class="title-link" data-id="わが青春のアルカディア">わが青春のアルカディア</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10947"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0002944" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わしも_ＷＡＳＩＭＯ_第1シリーズ_">
+        <td><a class="title-link" data-id="わしも_ＷＡＳＩＭＯ_第1シリーズ_">わしも ＷＡＳＩＭＯ(第1シリーズ）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23850"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わしも_ＷＡＳＩＭＯ_第2シリーズ_">
+        <td><a class="title-link" data-id="わしも_ＷＡＳＩＭＯ_第2シリーズ_">わしも ＷＡＳＩＭＯ(第2シリーズ）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23851"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わしも_ＷＡＳＩＭＯ_第3シリーズ_">
+        <td><a class="title-link" data-id="わしも_ＷＡＳＩＭＯ_第3シリーズ_">わしも ＷＡＳＩＭＯ(第3シリーズ）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23852"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わしも_ＷＡＳＩＭＯ_第4シリーズ_">
+        <td><a class="title-link" data-id="わしも_ＷＡＳＩＭＯ_第4シリーズ_">わしも ＷＡＳＩＭＯ(第4シリーズ）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23853"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わしも_ＷＡＳＩＭＯ_第5シリーズ_">
+        <td><a class="title-link" data-id="わしも_ＷＡＳＩＭＯ_第5シリーズ_">わしも ＷＡＳＩＭＯ(第5シリーズ）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23854"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わしも_ＷＡＳＩＭＯ_第6シリーズ_">
+        <td><a class="title-link" data-id="わしも_ＷＡＳＩＭＯ_第6シリーズ_">わしも ＷＡＳＩＭＯ(第6シリーズ）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23855"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="わすれなぐも">
+        <td><a class="title-link" data-id="わすれなぐも">わすれなぐも</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11587"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0046989" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わたしが恋人になれるわけないじゃん_ムリムリ___ムリじゃなかった___">
+        <td><a class="title-link"
+            data-id="わたしが恋人になれるわけないじゃん_ムリムリ___ムリじゃなかった___">わたしが恋人になれるわけないじゃん、ムリムリ!（※ムリじゃなかった!?）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=28107"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0200176" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワタシノセカイ">
+        <td><a class="title-link" data-id="ワタシノセカイ">ワタシノセカイ</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0074200" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わたしの幸せな結婚">
+        <td><a class="title-link" data-id="わたしの幸せな結婚">わたしの幸せな結婚</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=26472"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0087610" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わたしの幸せな結婚_第二期">
+        <td><a class="title-link" data-id="わたしの幸せな結婚_第二期">わたしの幸せな結婚　第二期</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27621"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0163337" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わたしの幸せな結婚_第十三話">
+        <td><a class="title-link" data-id="わたしの幸せな結婚_第十三話">わたしの幸せな結婚　第十三話</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27485"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0159243" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワッチャプリマジ_">
+        <td><a class="title-link" data-id="ワッチャプリマジ_">ワッチャプリマジ！</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25106"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0061676" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワルキューレはあきらめない">
+        <td><a class="title-link" data-id="ワルキューレはあきらめない">ワルキューレはあきらめない</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0075021" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワルキューレロマンツェ">
+        <td><a class="title-link" data-id="ワルキューレロマンツェ">ワルキューレロマンツェ</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11021"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0003277" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンダーエッグ_プライオリティ">
+        <td><a class="title-link" data-id="ワンダーエッグ_プライオリティ">ワンダーエッグ・プライオリティ</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24424"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0052923" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンダービートスクランブル">
+        <td><a class="title-link" data-id="ワンダービートスクランブル">ワンダービートスクランブル</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27984"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0096505" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わんぱく探偵団">
+        <td><a class="title-link" data-id="わんぱく探偵団">わんぱく探偵団</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27985"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0096506" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わんぱく王子の大蛇退治">
+        <td><a class="title-link" data-id="わんぱく王子の大蛇退治">わんぱく王子の大蛇退治</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0045416" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンパンマン">
+        <td><a class="title-link" data-id="ワンパンマン">ワンパンマン</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22640"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0020051" target="_blank">◎</a></td>
+      </tr>
+      <tr id="_ワンパンマン_第2期">
+        <td><a class="title-link" data-id="_ワンパンマン_第2期">『ワンパンマン』第2期</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22674"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0040165" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_CP9編">
+        <td><a class="title-link" data-id="ワンピース_CP9編">ワンピース CP9編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22930"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワンピース_TVオリジナル編">
+        <td><a class="title-link" data-id="ワンピース_TVオリジナル編">ワンピース TVオリジナル編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22916"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018487" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_TVオリジナル編_2_">
+        <td><a class="title-link" data-id="ワンピース_TVオリジナル編_2_">ワンピース TVオリジナル編（2）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22932"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018494" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_3D2Y_エースの死を越えて_ルフィ仲間との誓い">
+        <td><a class="title-link" data-id="ワンピース_3D2Y_エースの死を越えて_ルフィ仲間との誓い">ワンピース“3D2Y”エースの死を越えて！ルフィ仲間との誓い</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018852" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_アドベンチャー_オブ_ネブランディア">
+        <td><a class="title-link" data-id="ワンピース_アドベンチャー_オブ_ネブランディア">ワンピース アドベンチャー オブ ネブランディア</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030017" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_アラバスタ編">
+        <td><a class="title-link" data-id="ワンピース_アラバスタ編">ワンピース アラバスタ編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20614"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018486" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_インペルダウン編">
+        <td><a class="title-link" data-id="ワンピース_インペルダウン編">ワンピース インペルダウン編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24126"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018502" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_インペルダウン編_２_">
+        <td><a class="title-link" data-id="ワンピース_インペルダウン編_２_">ワンピース インペルダウン編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018503" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_インペルダウン編_３_">
+        <td><a class="title-link" data-id="ワンピース_インペルダウン編_３_">ワンピース インペルダウン編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018504" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_イーストブルー編">
+        <td><a class="title-link" data-id="ワンピース_イーストブルー編">ワンピース イーストブルー編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20516"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0017589" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ウォーターセブン編">
+        <td><a class="title-link" data-id="ワンピース_ウォーターセブン編">ワンピース ウォーターセブン編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22919"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018492" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エッグヘッド編">
+        <td><a class="title-link" data-id="ワンピース_エッグヘッド編">ワンピース エッグヘッド編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=26859"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0096696" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エッグヘッド編②">
+        <td><a class="title-link" data-id="ワンピース_エッグヘッド編②">ワンピース エッグヘッド編②</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0180800" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エニエス_ロビー編">
+        <td><a class="title-link" data-id="ワンピース_エニエス_ロビー編">ワンピース エニエス・ロビー編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22920"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018493" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エピソード_オブ_サボ__3兄弟の絆_奇跡の再会と受け継がれる意志_">
+        <td><a class="title-link" data-id="ワンピース_エピソード_オブ_サボ__3兄弟の絆_奇跡の再会と受け継がれる意志_">ワンピース エピソード オブ サボ ～3兄弟の絆
+            奇跡の再会と受け継がれる意志～</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0025470" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エピソード_オブ_ナミ_航海士の涙と仲間の絆">
+        <td><a class="title-link" data-id="ワンピース_エピソード_オブ_ナミ_航海士の涙と仲間の絆">ワンピース エピソード オブ ナミ 航海士の涙と仲間の絆</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018506" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エピソード_オブ_メリー__もうひとりの仲間の物語_">
+        <td><a class="title-link" data-id="ワンピース_エピソード_オブ_メリー__もうひとりの仲間の物語_">ワンピース エピソード オブ メリー ～もうひとりの仲間の物語～</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018508" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エピソード_オブ_ルフィ__ハンドアイランドの冒険_">
+        <td><a class="title-link" data-id="ワンピース_エピソード_オブ_ルフィ__ハンドアイランドの冒険_">ワンピース エピソード オブ ルフィ ～ハンドアイランドの冒険～</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018507" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エピソード_オブ_東の海_ルフィと4人の仲間の大冒険___">
+        <td><a class="title-link" data-id="ワンピース_エピソード_オブ_東の海_ルフィと4人の仲間の大冒険___">ワンピース エピソード オブ 東の海～ルフィと4人の仲間の大冒険！！～</a>
+        </td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0035255" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_エピソード_オブ_空島">
+        <td><a class="title-link" data-id="ワンピース_エピソード_オブ_空島">ワンピース エピソード オブ 空島</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0048629" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_グランドライン突入編">
+        <td><a class="title-link" data-id="ワンピース_グランドライン突入編">ワンピース グランドライン突入編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20604"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018484" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_さよならメリー号編">
+        <td><a class="title-link" data-id="ワンピース_さよならメリー号編">ワンピース さよならメリー号編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22931"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワンピース_シャボンディ諸島編">
+        <td><a class="title-link" data-id="ワンピース_シャボンディ諸島編">ワンピース シャボンディ諸島編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24124"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018498" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_シャボンディ諸島編_２_">
+        <td><a class="title-link" data-id="ワンピース_シャボンディ諸島編_２_">ワンピース シャボンディ諸島編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018499" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_シルバーマイン編">
+        <td><a class="title-link" data-id="ワンピース_シルバーマイン編">ワンピース シルバーマイン編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24131"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0042232" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_スリラーバーク編">
+        <td><a class="title-link" data-id="ワンピース_スリラーバーク編">ワンピース スリラーバーク編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24123"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018495" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_スリラーバーク編_２_">
+        <td><a class="title-link" data-id="ワンピース_スリラーバーク編_２_">ワンピース スリラーバーク編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018496" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_スリラーバーク編_３_">
+        <td><a class="title-link" data-id="ワンピース_スリラーバーク編_３_">ワンピース スリラーバーク編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018497" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ゾウ編">
+        <td><a class="title-link" data-id="ワンピース_ゾウ編">ワンピース ゾウ編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24132"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0042233" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ゾウ編_２_">
+        <td><a class="title-link" data-id="ワンピース_ゾウ編_２_">ワンピース ゾウ編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0042234" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ゾウ編_３_">
+        <td><a class="title-link" data-id="ワンピース_ゾウ編_３_">ワンピース ゾウ編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0042235" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_チョッパー登場_冬島編">
+        <td><a class="title-link" data-id="ワンピース_チョッパー登場_冬島編">ワンピース チョッパー登場・冬島編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20605"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018485" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編">ワンピース ドレスローザ編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24130"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030370" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_２_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_２_">ワンピース ドレスローザ編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030371" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_３_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_３_">ワンピース ドレスローザ編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030372" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_４_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_４_">ワンピース ドレスローザ編(４)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030373" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_５_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_５_">ワンピース ドレスローザ編(５)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0035983" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_６_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_６_">ワンピース ドレスローザ編(６)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0036092" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_７_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_７_">ワンピース ドレスローザ編(７)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0036750" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ドレスローザ編_８_">
+        <td><a class="title-link" data-id="ワンピース_ドレスローザ編_８_">ワンピース ドレスローザ編(８)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0037248" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ハート_オブ_ゴールド">
+        <td><a class="title-link" data-id="ワンピース_ハート_オブ_ゴールド">ワンピース ハート オブ ゴールド</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0030018" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_パンクハザード編">
+        <td><a class="title-link" data-id="ワンピース_パンクハザード編">ワンピース パンクハザード編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24129"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0025471" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_パンクハザード編_２_">
+        <td><a class="title-link" data-id="ワンピース_パンクハザード編_２_">ワンピース パンクハザード編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0025472" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_パンクハザード編_３_">
+        <td><a class="title-link" data-id="ワンピース_パンクハザード編_３_">ワンピース パンクハザード編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0025473" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_フォクシー海賊団編">
+        <td><a class="title-link" data-id="ワンピース_フォクシー海賊団編">ワンピース フォクシー海賊団編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22923"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018491" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_１_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_１_">ワンピース ホールケーキアイランド編（１）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0047531" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_２_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_２_">ワンピース ホールケーキアイランド編（２）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0047532" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_３_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_３_">ワンピース ホールケーキアイランド編（３）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0048627" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_４_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_４_">ワンピース ホールケーキアイランド編（４）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0048628" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_５_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_５_">ワンピース ホールケーキアイランド編（５）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0049039" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_６_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_６_">ワンピース ホールケーキアイランド編（６）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0049040" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_７_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_７_">ワンピース ホールケーキアイランド編（７）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0050419" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_８_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_８_">ワンピース ホールケーキアイランド編（８）</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0050420" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_783話_835話_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_783話_835話_">ワンピース ホールケーキアイランド編（783話～835話）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24146"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワンピース_ホールケーキアイランド編_836話_891話_">
+        <td><a class="title-link" data-id="ワンピース_ホールケーキアイランド編_836話_891話_">ワンピース ホールケーキアイランド編（836話～891話）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25151"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワンピース_マリンフォード編">
+        <td><a class="title-link" data-id="ワンピース_マリンフォード編">ワンピース マリンフォード編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24127"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018505" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_マリンフォード編_２_">
+        <td><a class="title-link" data-id="ワンピース_マリンフォード編_２_">ワンピース マリンフォード編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018098" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_マリンフォード編_３_">
+        <td><a class="title-link" data-id="ワンピース_マリンフォード編_３_">ワンピース マリンフォード編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018099" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_ワノ国編">
+        <td><a class="title-link" data-id="ワンピース_ワノ国編">ワンピース ワノ国編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25152"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0042154" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_女ヶ島編">
+        <td><a class="title-link" data-id="ワンピース_女ヶ島編">ワンピース 女ヶ島編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24125"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018501" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_海軍要塞編">
+        <td><a class="title-link" data-id="ワンピース_海軍要塞編">ワンピース 海軍要塞編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22918"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018490" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_空島_スカイピア編">
+        <td><a class="title-link" data-id="ワンピース_空島_スカイピア編">ワンピース 空島・スカイピア編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22917"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018488" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_空島_黄金の鐘編">
+        <td><a class="title-link" data-id="ワンピース_空島_黄金の鐘編">ワンピース 空島・黄金の鐘編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22922"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018489" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_第406_407話">
+        <td><a class="title-link" data-id="ワンピース_第406_407話">ワンピース 第406～407話</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24145"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0018500" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_第575_578話">
+        <td><a class="title-link" data-id="ワンピース_第575_578話">ワンピース 第575～578話</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25153"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0063447" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_第590話">
+        <td><a class="title-link" data-id="ワンピース_第590話">ワンピース 第590話</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25154"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワンピース_魚人島編">
+        <td><a class="title-link" data-id="ワンピース_魚人島編">ワンピース 魚人島編</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24128"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0019069" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_魚人島編_２_">
+        <td><a class="title-link" data-id="ワンピース_魚人島編_２_">ワンピース 魚人島編(２)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0019070" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンピース_魚人島編_３_">
+        <td><a class="title-link" data-id="ワンピース_魚人島編_３_">ワンピース 魚人島編(３)</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0019071" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンルーム_日当たり普通_天使つき_">
+        <td><a class="title-link" data-id="ワンルーム_日当たり普通_天使つき_">ワンルーム、日当たり普通、天使つき。</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27033"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0100048" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワンワン三銃士">
+        <td><a class="title-link" data-id="ワンワン三銃士">ワンワン三銃士</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23534"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0002395" target="_blank">◎</a></td>
+      </tr>
+      <tr id="わんわん忠臣蔵">
+        <td><a class="title-link" data-id="わんわん忠臣蔵">わんわん忠臣蔵</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0045415" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドウィッチーズ発進しますっ_">
+        <td><a class="title-link" data-id="ワールドウィッチーズ発進しますっ_">ワールドウィッチーズ発進しますっ！</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24409"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0053461" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドダイスター">
+        <td><a class="title-link" data-id="ワールドダイスター">ワールドダイスター</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=26258"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0079603" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールド_デストラクション__世界撲滅の六人_">
+        <td><a class="title-link" data-id="ワールド_デストラクション__世界撲滅の六人_">ワールド・デストラクション ～世界撲滅の六人～</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11102"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワールドトリガー">
+        <td><a class="title-link" data-id="ワールドトリガー">ワールドトリガー</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21238"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0012119" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドトリガー_2ndシーズン">
+        <td><a class="title-link" data-id="ワールドトリガー_2ndシーズン">ワールドトリガー 2ndシーズン</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24461"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0052937" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドトリガー_3rdシーズン">
+        <td><a class="title-link" data-id="ワールドトリガー_3rdシーズン">ワールドトリガー 3rdシーズン</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25098"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0061683" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドフールニュース">
+        <td><a class="title-link" data-id="ワールドフールニュース">ワールドフールニュース</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=11419"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0013627" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドフールニュース_PART_Ⅱ">
+        <td><a class="title-link" data-id="ワールドフールニュース_PART_Ⅱ">ワールドフールニュース PART Ⅱ</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21892"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0029568" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ワールドフールニュース_YouTube版">
+        <td><a class="title-link" data-id="ワールドフールニュース_YouTube版">ワールドフールニュース　YouTube版</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23955"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+      </tr>
+      <tr id="ワールド_フール_ニュース_アニメバンチョー版">
+        <td><a class="title-link" data-id="ワールド_フール_ニュース_アニメバンチョー版">ワールド・フール・ニュース アニメバンチョー版</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0013613" target="_blank">◎</a></td>
+      </tr>
+      <tr id="和田雅成と安里勇哉の男映えKITAKANTO対決__僕たちリアクション芸人じゃないけど__安里勇哉_芸歴１０周年おめでとうSP_">
+        <td><a class="title-link"
+            data-id="和田雅成と安里勇哉の男映えKITAKANTO対決__僕たちリアクション芸人じゃないけど__安里勇哉_芸歴１０周年おめでとうSP_">和田雅成と安里勇哉の男映えKITAKANTO対決!〜僕たちリアクション芸人じゃないけど……安里勇哉・芸歴１０周年おめでとうSP〜</a>
+        </td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0079446" target="_blank">◎</a></td>
+      </tr>
+      <tr id="_咲う_アルスノトリア_すんっ__">
+        <td><a class="title-link" data-id="_咲う_アルスノトリア_すんっ__">『咲う アルスノトリア すんっ！』</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=25649"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0069698" target="_blank">◎</a></td>
+      </tr>
+      <tr id="惑星ロボ_ダンガードA_宇宙大海戦">
+        <td><a class="title-link" data-id="惑星ロボ_ダンガードA_宇宙大海戦">惑星ロボ ダンガードA 宇宙大海戦</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0003134" target="_blank">◎</a></td>
+      </tr>
+      <tr id="惑星ロボ_ダンガードA_対昆虫ロボット軍団">
+        <td><a class="title-link" data-id="惑星ロボ_ダンガードA_対昆虫ロボット軍団">惑星ロボ ダンガードA 対昆虫ロボット軍団</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0003135" target="_blank">◎</a></td>
+      </tr>
+      <tr id="惑星大怪獣ネガドン">
+        <td><a class="title-link" data-id="惑星大怪獣ネガドン">惑星大怪獣ネガドン</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10179"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0013628" target="_blank">◎</a></td>
+      </tr>
+      <tr id="我が家のお稲荷さま_">
+        <td><a class="title-link" data-id="我が家のお稲荷さま_">我が家のお稲荷さま。</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=10343"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0013514" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私_能力は平均値でって言ったよね_">
+        <td><a class="title-link" data-id="私_能力は平均値でって言ったよね_">私、能力は平均値でって言ったよね！</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24417"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0043584" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私がモテてどうすんだ">
+        <td><a class="title-link" data-id="私がモテてどうすんだ">私がモテてどうすんだ</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21180"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0026839" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私がモテないのはどう考えてもお前らが悪い_">
+        <td><a class="title-link" data-id="私がモテないのはどう考えてもお前らが悪い_">私がモテないのはどう考えてもお前らが悪い！</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20914"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0002946" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私に天使が舞い降りた_">
+        <td><a class="title-link" data-id="私に天使が舞い降りた_">私に天使が舞い降りた！</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22572"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0039231" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私に天使が舞い降りた_プレシャス_フレンズ">
+        <td><a class="title-link" data-id="私に天使が舞い降りた_プレシャス_フレンズ">私に天使が舞い降りた！プレシャス・フレンズ</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27195"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0079001" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私のあしながおじさん">
+        <td><a class="title-link" data-id="私のあしながおじさん">私のあしながおじさん</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20248"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0002367" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私の推しは悪役令嬢_">
+        <td><a class="title-link" data-id="私の推しは悪役令嬢_">私の推しは悪役令嬢。</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=26571"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0093577" target="_blank">◎</a></td>
+      </tr>
+      <tr id="私は_私と_私が_私を_">
+        <td><a class="title-link" data-id="私は_私と_私が_私を_">私は、私と、私が、私を、</a></td>
+        <td style="text-align:center;"><span class="no-link">✖</span></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0148245" target="_blank">◎</a></td>
+      </tr>
+      <tr id="笑ゥせぇるすまん_89_93年__デジタルリマスター版_">
+        <td><a class="title-link" data-id="笑ゥせぇるすまん_89_93年__デジタルリマスター版_">笑ゥせぇるすまん（89～93年）【デジタルリマスター版】</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=21482"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0028595" target="_blank">◎</a></td>
+      </tr>
+      <tr id="_笑ゥせぇるすまん_THE_STAGE">
+        <td><a class="title-link" data-id="_笑ゥせぇるすまん_THE_STAGE">「笑ゥせぇるすまん」THE STAGE</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=26071"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0067353" target="_blank">◎</a></td>
+      </tr>
+      <tr id="綿の国星">
+        <td><a class="title-link" data-id="綿の国星">綿の国星</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27250"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0096501" target="_blank">◎</a></td>
+      </tr>
+      <tr id="若おかみは小学生_">
+        <td><a class="title-link" data-id="若おかみは小学生_">若おかみは小学生！</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=22485"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0034339" target="_blank">◎</a></td>
+      </tr>
+      <tr id="若おかみは小学生__劇場版_">
+        <td><a class="title-link" data-id="若おかみは小学生__劇場版_">若おかみは小学生！（劇場版）</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=23939"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0039863" target="_blank">◎</a></td>
+      </tr>
+      <tr id="若草のシャルロット">
+        <td><a class="title-link" data-id="若草のシャルロット">若草のシャルロット</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=24061"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0003318" target="_blank">◎</a></td>
+      </tr>
+      <tr id="若草物語_ナンとジョー先生">
+        <td><a class="title-link" data-id="若草物語_ナンとジョー先生">若草物語　ナンとジョー先生</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=20251"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0002366" target="_blank">◎</a></td>
+      </tr>
+      <tr id="ンめねこ">
+        <td><a class="title-link" data-id="ンめねこ">ンめねこ</a></td>
+        <td style="text-align:center;"><a href="https://animestore.docomo.ne.jp/animestore/ci_pc?workId=27900"
+            target="_blank">◎</a></td>
+        <td style="text-align:center;"><a href="https://video.unext.jp/title/SID0181253" target="_blank">◎</a></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <div class="custom-tooltip">
+    <a href="{% url 'comparison:index' %}">トップページに戻る</a>
+  </div>
+  <script>
+    window.rowKey = "wa"; // このページは「わ」行
+
+    // index.htmlからジャンプ
+    window.addEventListener("DOMContentLoaded", () => {
+      const id = sessionStorage.getItem("scrollToId");
+      if (!id) return;
+
+      // const target = document.querySelector(`[data-id="${id}"]`);
+      const target = document.getElementById(id);
+      if (target) {
+        target.scrollIntoView({ behavior: "smooth", block: "center" });
+        target.classList.add("highlight");
+        setTimeout(() => target.classList.remove("highlight"), 3000);
+      }
+
+      sessionStorage.removeItem("scrollToId");
+    });
+  </script>
+  <script src="{% static 'comparison/tags_script/script_wa_tag_link.js' %}"></script>
+</body>
+
+</html>

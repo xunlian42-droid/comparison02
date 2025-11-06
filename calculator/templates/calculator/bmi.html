@@ -1,0 +1,46 @@
+<!-- calculator/templates/calculator/bmi.html -->
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>BMI計算</title>
+</head>
+
+<body>
+    <li><a href="{% url 'home:index' %}">ホームに戻る</a>
+        <hr>
+        <h1>BMI計算フォーム</h1>
+
+        <!-- 身長と体重の入力フォーム -->
+        <form method="post">
+            {% csrf_token %} <!-- セキュリティ対策：クロスサイトリクエスト防止 -->
+            <label>お名前:</label>
+            <input type="text" name="simei" maxlength="50" required value="{{height}}"><br><br>
+
+            <label>身長(cm):</label>
+            <input type="number" name="height" step="0.1" required value="{{height}}"><br><br>
+
+            <label>体重(kg):</label>
+            <input type="number" name="weight" step="0.1" required value="{{weight}}"><br><br>
+
+            <button type="submit">計算する</button>
+            <button type="button" onclick="resetForm()">リセット</button>
+
+            <script>
+                function resetForm() {
+                    document.querySelector('input[name="simei"]').value = '';
+                    document.querySelector('input[name="height"]').value = '';
+                    document.querySelector('input[name="weight"]').value = '';
+                }
+            </script>
+        </form>
+
+        <!-- BMI結果の表示 -->
+        {# context = {'simei': simei,'height': height, 'weight': weight, 'bmi': bmi} #}
+        {% if bmi %}
+        <h2>{{simei}}さんの身長：{{height}} 体重：{{weight}}、 BMIは {{ bmi }} です。</h2>
+        {% endif %}
+</body>
+
+</html>

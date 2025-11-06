@@ -1,0 +1,12 @@
+# .gitignore の例（重要な除外項目）
+__pycache__/
+*.py[cod]
+venv/
+db.sqlite3
+.env*
+staticfiles/
+media/
+*.log
+cleanup_django.bat
+setup_django_env.bat
+setup_django_env.sh
