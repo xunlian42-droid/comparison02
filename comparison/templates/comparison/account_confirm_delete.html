@@ -1,0 +1,8 @@
+<h2>アカウント削除の確認</h2>
+<p>本当にアカウントを削除しますか？この操作は元に戻せません。</p>
+
+<form method="post" action="{% url 'comparison:delete_account' %}">
+  {% csrf_token %}
+  <button type="submit" class="danger-button">削除する</button>
+  <a href="{% url 'comparison:mypage' %}">キャンセル</a>
+</form>

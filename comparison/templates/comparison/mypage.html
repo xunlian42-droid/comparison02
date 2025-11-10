@@ -33,6 +33,13 @@
 </ul>
 
   <a href="{% url 'comparison:index' %}">トップページに戻る</a>
+    <hr>
+
+  <form method="post" action="{% url 'comparison:delete_account' %}" onsubmit="return confirm('本当にアカウントを削除しますか？この操作は元に戻せません。');">
+    {% csrf_token %}
+    <button type="submit" class="danger-button">アカウント削除</button>
+  </form>
+  <hr>
 
   <form method="post" action="{% url 'logout' %}">
     {% csrf_token %}

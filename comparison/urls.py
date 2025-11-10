@@ -54,6 +54,8 @@ urlpatterns = [
     path('tag/<int:tag_id>/edit/', views.edit_tag, name='edit_tag'),
     path('tag/<int:tag_id>/delete/', views.delete_tag, name='delete_tag'),
 
+    path('delete-account/confirm/', views.confirm_delete_account, name='confirm_delete_account'),
+    path('delete-account/', views.delete_account, name='delete_account'),
 
 ]
 

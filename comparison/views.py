@@ -81,6 +81,27 @@ def register(request):
         form = UserCreationForm()  # 空のフォームを表示
     return render(request, 'registration/register.html', {'form': form})
 
+@login_required
+def confirm_delete_account(request):
+    return render(request, 'comparison/account_confirm_delete.html')
+
+@login_required
+def delete_account(request):
+    if request.method == 'POST':
+        user = request.user
+
+        # ユーザーが作成したタグを削除
+        Tag.objects.filter(created_by=user).delete()
+
+        # ユーザーを削除
+        user.delete()
+
+        # セッション終了
+        logout(request)
+
+        return redirect('comparison:index')
+    return redirect('comparison:mypage')
+
 
 def normalize_tag_name(name):
     return name.strip().replace('　', ' ').replace('\u3000', ' ')  # 全角スペース除去
