@@ -22,17 +22,6 @@
     });
 
     // 比較表ページに作品IDでスクロールする関数（タグウインドウから呼ばれる）
-<<<<<<< HEAD
-    window.scrollToTitle = function (id) {
-        const target = document.getElementById(id);
-        if (target) {
-            target.scrollIntoView({ behavior: "smooth", block: "center" });
-            target.classList.add("highlight");
-            setTimeout(() => target.classList.remove("highlight"), 10000);
-        }
-    };
-})();
-=======
     // window.scrollToTitle = function (id) {
     //     const target = document.getElementById(id);
     //     if (target) {
@@ -182,4 +171,3 @@
   //     }
   //   }
   // });
->>>>>>> 02eda6b (2025_1115_mypage_custom)

@@ -45,9 +45,6 @@ ul {
 input#search-box {
     width: 100%;
     padding: 0.5rem;
-<<<<<<< HEAD
-}
-=======
 }
 
 .favorite-button {
@@ -63,4 +60,3 @@ input#search-box {
 .favorite-button:hover {
   transform: scale(1.2);
 }
->>>>>>> 02eda6b (2025_1115_mypage_custom)

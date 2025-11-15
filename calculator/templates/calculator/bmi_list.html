@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <a href="{% url 'home:index' %}">ホームに戻る</a>
 <hr>
 <h2>登録済みBMI一覧</h2>
@@ -6,13 +5,4 @@
     {% for r in records %}
     <li>{{ r.simei }}: {{ r.height }}cm / {{ r.weight }}kg → BMI: {{ r.bmi }}</li>
     {% endfor %}
-=======
-<a href="{% url 'home:index' %}">ホームに戻る</a>
-<hr>
-<h2>登録済みBMI一覧</h2>
-<ul>
-    {% for r in records %}
-    <li>{{ r.simei }}: {{ r.height }}cm / {{ r.weight }}kg → BMI: {{ r.bmi }}</li>
-    {% endfor %}
->>>>>>> 02eda6b (2025_1115_mypage_custom)
 </ul>

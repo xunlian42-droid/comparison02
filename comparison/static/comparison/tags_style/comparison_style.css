@@ -148,8 +148,6 @@ a.title-link:hover {
   0%   { background-color: yellow; }
   50%  { background-color: gold; }
   100% { background-color: transparent; }
-<<<<<<< HEAD
-=======
 }
 
 .fav-cell {
@@ -168,5 +166,4 @@ a.title-link:hover {
 
 .fav-cell button:hover {
   background-color: #00c3ff;
->>>>>>> 02eda6b (2025_1115_mypage_custom)
 }

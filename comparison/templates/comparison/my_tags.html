@@ -1,28 +1,3 @@
-<<<<<<< HEAD
-<h2>あなたのタグ一覧</h2>
-<ul>
-  {% for tag in tags %}
-    <li id="tag-{{ tag.id }}">
-      <strong>{{ tag.role }}:</strong> {{ tag.name }}
-      <div class="works">
-        適用作品：
-        {% for work_tag in tag.works.all %}
-          <span>{{ work_tag.title }}</span>{% if not forloop.last %}, {% endif %}
-        {% endfor %}
-      </div>
-      <a href="{% url 'comparison:edit_tag' tag.id %}">編集</a>
-      <form method="post" action="{% url 'comparison:delete_tag' tag.id %}" style="display:inline">
-        {% csrf_token %}
-        <button type="submit" onclick="return confirm('本当に削除しますか？')">削除</button>
-      </form>
-    </li>
-  {% empty %}
-    <li>タグはまだ登録されていません。</li>
-  {% endfor %}
-</ul>
-
-  <a href="{% url 'comparison:index' %}">トップページに戻る</a>
-=======
 {% load static %}
 <!DOCTYPE html>
 <html lang="ja">
@@ -65,4 +40,3 @@
 </body>
 
 </html>
->>>>>>> 02eda6b (2025_1115_mypage_custom)

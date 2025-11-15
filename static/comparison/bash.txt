@@ -1,4 +1,0 @@
-python comparison/build_workpage_map.py -i comparison/templates -p "**/comparison_*.html" -o static/comparison/workPageMap.json
-
-python comparison/build_workpage_map.py -i comparison/templates -p "**/comparison_*.html" -t com
-parison/tags_html_folder -o static/comparison/workPageMap.json --force-override

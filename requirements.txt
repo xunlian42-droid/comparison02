@@ -1,12 +1,5 @@
 asgiref==3.10.0
 Django==5.1.3
-<<<<<<< HEAD
-django-bootstrap5==25.2
-django-environ==0.12.0
-sqlparse==0.5.3
-tzdata==2025.2
-=======
 django-bootstrap5==25.3
 django-environ==0.12.0
 sqlparse==0.5.3
->>>>>>> 02eda6b (2025_1115_mypage_custom)

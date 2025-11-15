@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <h3>hello.html Formクラスを利用したversion</h3>
 <!-- 入力フォーム -->
 <form method="post">
@@ -14,20 +13,3 @@
     {{ simei }}
 {% endif %}
  <br>
-=======
-<h3>hello.html Formクラスを利用したversion</h3>
-<!-- 入力フォーム -->
-<form method="post">
-    <!-- <input type=hidden value="ワンタイムパスワード文字列"> -->
-    {% csrf_token %}　<!--  セキュリティー対策 -->
-    {{form.as_p}}
-    <button type="submit">登録する</button>
-</form>
-
-
-<!-- 辞書のキー項目名 -->
-{% if simei %}
-    {{ simei }}
-{% endif %}
- <br>
->>>>>>> 02eda6b (2025_1115_mypage_custom)

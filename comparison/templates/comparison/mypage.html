@@ -1,53 +1,3 @@
-<<<<<<< HEAD
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>マイページ</title>
-</head>
-<body>
-  <h1>Welcome, {{ request.user.username }}!</h1>
-
-<h2>あなたのタグ一覧</h2>
-<ul>
-  {% for tag in tags %}
-    <li id="tag-{{ tag.id }}">
-      <strong>{{ tag.role }}:</strong> {{ tag.name }}
-      <div class="works">
-        適用作品：
-        {% for wt in tag.work_tags.all %}
-          <span>{{ wt.work.title }}</span>{% if not forloop.last %}, {% endif %}
-        {% endfor %}
-      </div>
-      {% if tag.created_by == user %}
-        <a href="{% url 'comparison:edit_tag' tag.id %}">編集</a>
-        <form method="post" action="{% url 'comparison:delete_tag' tag.id %}" style="display:inline;">
-          {% csrf_token %}
-          <button type="submit" onclick="return confirm('このタグを削除してもよいですか？\n\n注意：このタグを使用している全ての作品から削除されます。');">削除</button>
-        </form>
-      {% endif %}
-    </li>
-  {% empty %}
-    <li>タグはまだ登録されていません。</li>
-  {% endfor %}
-</ul>
-
-  <a href="{% url 'comparison:index' %}">トップページに戻る</a>
-    <hr>
-
-  <form method="post" action="{% url 'comparison:delete_account' %}" onsubmit="return confirm('本当にアカウントを削除しますか？この操作は元に戻せません。');">
-    {% csrf_token %}
-    <button type="submit" class="danger-button">アカウント削除</button>
-  </form>
-  <hr>
-
-  <form method="post" action="{% url 'logout' %}">
-    {% csrf_token %}
-    <button type="submit">Logout</button>
-  </form>
-</body>
-=======
 <!DOCTYPE html>
 <html lang="ja">
 {% load static %}
@@ -150,5 +100,4 @@
   </script>
 </body>
 
->>>>>>> 02eda6b (2025_1115_mypage_custom)
 </html>

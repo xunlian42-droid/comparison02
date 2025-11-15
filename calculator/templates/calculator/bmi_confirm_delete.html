@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <!-- bmi_confirm_delete.html 削除確認画面 -->
  <h2>削除確認</h2>
 <p>{{ record.simei }} のBMI情報を削除してもよろしいですか？</p>
@@ -6,13 +5,4 @@
   {% csrf_token %}
   <button type="submit">削除する</button>
 </form>
-=======
-<!-- bmi_confirm_delete.html 削除確認画面 -->
- <h2>削除確認</h2>
-<p>{{ record.simei }} のBMI情報を削除してもよろしいですか？</p>
-<form method="post">
-  {% csrf_token %}
-  <button type="submit">削除する</button>
-</form>
->>>>>>> 02eda6b (2025_1115_mypage_custom)
 <a href="{% url 'calculator:bmi_record_list_edit_delete' %}">キャンセル</a>

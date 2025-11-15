@@ -14,8 +14,6 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-=======
 
     <!-- デバッグ情報 -->
     <!-- <p>DEBUG user: {{ user.username }} / is_authenticated: {{ user.is_authenticated }}</p>
@@ -23,7 +21,6 @@
     <p>DEBUG favorite_ids: {{ favorite_ids }}</p> -->
 
 
->>>>>>> 02eda6b (2025_1115_mypage_custom)
     <!-- 元のタグ一覧ブロック群（非表示にしておく） -->
     <div id="all-tags" style="display:none">
         <input id="search-box" placeholder="作品名で絞り込み…" type="text" />
@@ -24465,18 +24462,6 @@
     <!-- ここに showTagsFor／showTagResults の内容をレンダーする -->
     <div id="tag-container"></div>
 
-<<<<<<< HEAD
-{% for work in works %}
-  <div id="{{ work.id }}">
-    <h3>{{ work.title }}</h3>
-    <ul>
-      {% for tag in work.tags.all %}
-        <li><strong>{{ tag.role }}:</strong> {{ tag.name }}</li>
-      {% endfor %}
-    </ul>
-  </div>
-{% endfor %}
-=======
 
     <!-- <hr>
 
@@ -24512,7 +24497,6 @@
 
 
 
->>>>>>> 02eda6b (2025_1115_mypage_custom)
     <script src="{% static 'comparison/tags_script/tag_window_logic.js' %}"></script>
 </body>
 

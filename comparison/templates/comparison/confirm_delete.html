@@ -1,14 +1,6 @@
-<<<<<<< HEAD
 <form method="post" action="{% url 'comparison:delete_tag' tag.id %}">
   {% csrf_token %}
   <p>タグ「{{ tag }}」を削除します。よろしいですか？</p>
   <button type="submit">削除</button>
   <a href="{% url 'comparison:my_tags' %}">戻る</a>
-=======
-<form method="post" action="{% url 'comparison:delete_tag' tag.id %}">
-  {% csrf_token %}
-  <p>タグ「{{ tag }}」を削除します。よろしいですか？</p>
-  <button type="submit">削除</button>
-  <a href="{% url 'comparison:my_tags' %}">戻る</a>
->>>>>>> 02eda6b (2025_1115_mypage_custom)
 </form>
