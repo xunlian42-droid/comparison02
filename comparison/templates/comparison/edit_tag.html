@@ -34,10 +34,6 @@
     </ul>
 
     <h4>タグ名の編集</h4>
-    <li>このタグには作品が紐づいていません。</li>
-    {% endfor %}
-    </ul>
-
     <form method="post" action="{% url 'comparison:edit_tag' tag.id %}">
       {% csrf_token %}
       {{ form.as_p }}
