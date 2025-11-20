@@ -29,8 +29,8 @@
         </form>
       </li>
       {% empty %}
-      <<<<<<< HEAD <li>このタグには、あなたが追加した作品はまだありません。</li>
-        {% endfor %}
+      <li>このタグには、あなたが追加した作品はまだありません。</li>
+      {% endfor %}
     </ul>
 
     <h4>タグ名の編集</h4>
@@ -39,7 +39,6 @@
     {% endfor %}
     </ul>
 
-    >>>>>>> origin/main
     <form method="post" action="{% url 'comparison:edit_tag' tag.id %}">
       {% csrf_token %}
       {{ form.as_p }}
