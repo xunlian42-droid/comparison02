@@ -30,7 +30,6 @@ document.addEventListener("DOMContentLoaded", () => {
         // 2. currentId を設定して表示処理を開始
         currentId = hashId;
         const blk = allTags.querySelector(`#${CSS.escape(hashId)}`);
-
         if (blk) {
             await showTagsFor(currentId);
         } else {
@@ -62,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
             const blk = allTags.querySelector(`#${CSS.escape(workId)}`);
             const container = document.getElementById('tag-container');
             if (!container) return;
-
             let title = workId;
             if (blk && blk.querySelector("h3")) {
                 title = blk.querySelector("h3").textContent.trim();
@@ -88,7 +86,6 @@ document.addEventListener("DOMContentLoaded", () => {
                     const name = li.textContent.replace(strong.textContent, "").trim();
                     const tag = `${role}: ${name}`;
                     htmlTags.push(tag);
-
                     // タグインデックスを更新
                     if (!tagIndex[tag]) {
                         tagIndex[tag] = [];
@@ -104,7 +101,6 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 const response = await fetch(`/comparison/api/work/${encodeURIComponent(workId)}/tags/`);
                 const data = await response.json();
-
                 if (data.status === 'ok') {
                     if (data.tag_details) {
                         data.tag_details.forEach(tagDetail => {
@@ -112,7 +108,6 @@ document.addEventListener("DOMContentLoaded", () => {
                             if (!tagIndex[tagKey]) {
                                 tagIndex[tagKey] = [];
                             }
-
                             tagDetail.related_works.forEach(work => {
                                 if (!tagIndex[tagKey].some(entry => entry.id === work.external_id)) {
                                     tagIndex[tagKey].push({
@@ -133,7 +128,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
             // HTMLとサーバーのタグを統合して重複を除去
             const uniqueTags = Array.from(new Set([...htmlTags, ...serverTags]));
-
             // 描画
             container.innerHTML = `<h3>${title}</h3>`;
             const tagList = document.createElement('div');
@@ -172,13 +166,11 @@ document.addEventListener("DOMContentLoaded", () => {
             const anchor = (pageInfo && pageInfo.anchor) ? pageInfo.anchor : fallbackKey;
             const encodedAnchor = encodeURIComponent(anchor);
 
-
             // --- workPageMap から比較表ファイル名を抽出 ---
             let pagePath = (pageInfo && pageInfo.page) ? pageInfo.page : '';
             if (!pagePath && fallbackKey && window.workPageMap && window.workPageMap[fallbackKey]) {
                 pagePath = window.workPageMap[fallbackKey].page || '';
             }
-
             let filename = pagePath.split('/').pop(); // → comparison_10_wa_with_links.html
 
             // DjangoのURLに変換
@@ -284,7 +276,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 li.appendChild(a);
                 ul.appendChild(li);
             });
-
 
 
             container.appendChild(ul);

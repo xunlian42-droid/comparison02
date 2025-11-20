@@ -23,16 +23,16 @@
           <div class="works">
             適用作品：
             {% for wt in tag.user_work_tags %}
-              {% if wt.work.comparison_page and wt.work.id_for_anchor %}
-                <a href="{% url 'comparison:comparison_page' page=wt.work.comparison_page %}#{{ wt.work.id_for_anchor }}">
-                  {{ wt.work.title }}
-                </a>
-              {% else %}
-                <span>{{ wt.work.title }}</span>
-              {% endif %}
-              {% if not forloop.last %}, {% endif %}
+            {% if wt.work.comparison_page and wt.work.id_for_anchor %}
+            <a href="{% url 'comparison:comparison_page' page=wt.work.comparison_page %}#{{ wt.work.id_for_anchor }}">
+              {{ wt.work.title }}
+            </a>
+            {% else %}
+            <span>{{ wt.work.title }}</span>
+            {% endif %}
+            {% if not forloop.last %}, {% endif %}
             {% empty %}
-              <span>該当作品なし</span>
+            <span>該当作品なし</span>
             {% endfor %}
           </div>
           {% if tag.user_work_tags %}
@@ -52,7 +52,7 @@
       </ul>
     </div>
 
-    
+
 
     <!-- お気に入り一覧 -->
     <h2 class="your_favorites collapsible">お気に入り作品一覧</h2>
@@ -68,21 +68,22 @@
         {% for f in favorites %}
         <li>
           {% if f.work and f.work.id %}
-            <a href="{% url 'comparison:work_detail' f.work.id %}">{{ f.work.title }}</a>
+          <a href="{% url 'comparison:work_detail' f.work.id %}">{{ f.work.title }}</a>
 
-            <!-- マイリストへ追加フォーム -->
-            <form class="mylist_form" method="post" action="{% url 'comparison:add_to_mylist' f.work.pk %}" style="display:inline;">
-              {% csrf_token %}
-              <select name="mylist_id">
-                {% for mylist in mylists %}
-                  <option value="{{ mylist.pk }}">{{ mylist.name }}</option>
-                {% endfor %}
-              </select>
-              <button type="submit" class="btn btn-sm btn-primary">追加</button>
-            </form>         
+          <!-- マイリストへ追加フォーム -->
+          <form class="mylist_form" method="post" action="{% url 'comparison:add_to_mylist' f.work.pk %}"
+            style="display:inline;">
+            {% csrf_token %}
+            <select name="mylist_id">
+              {% for mylist in mylists %}
+              <option value="{{ mylist.pk }}">{{ mylist.name }}</option>
+              {% endfor %}
+            </select>
+            <button type="submit" class="btn btn-sm btn-primary">追加</button>
+          </form>
 
           {% else %}
-            <span class="missing-work">（作品情報がありません）</span>
+          <span class="missing-work">（作品情報がありません）</span>
           {% endif %}
         </li>
         {% empty %}
@@ -100,10 +101,10 @@
         <li>
           <a href="{% url 'comparison:mylist_detail' mylist.pk %}">{{ mylist.name }}</a>
           {% if mylist.is_public %}
-            
-            <span class="badge bg-success">公開</span>
+
+          <span class="badge bg-success">公開</span>
           {% else %}
-            <span class="badge bg-secondary">非公開</span>
+          <span class="badge bg-secondary">非公開</span>
           {% endif %}
           <!-- 削除リンク -->
           <a href="{% url 'comparison:delete_mylist' mylist.pk %}" class="btn btn-sm btn-danger">削除</a>
@@ -135,7 +136,7 @@
   <script>
 
     // 各セクションの開閉状態をローカルストレージに保存・復元する改良版
-    document.addEventListener("DOMContentLoaded", function() {
+    document.addEventListener("DOMContentLoaded", function () {
       // タグ一覧
       const tagCollapsible = document.querySelector(".your_tag");
       const tagContent = document.querySelector(".tag-legend");
@@ -145,7 +146,7 @@
         tagCollapsible.classList.add("active");
       }
       // 開閉イベントを監視
-      tagCollapsible.addEventListener("click", function() {
+      tagCollapsible.addEventListener("click", function () {
         tagContent.classList.toggle("open");
         tagCollapsible.classList.toggle("active");
         localStorage.setItem("tagsOpen", tagContent.classList.contains("open"));
@@ -162,7 +163,7 @@
       }
 
       // 開閉イベントを監視
-      collapsible.addEventListener("click", function() {
+      collapsible.addEventListener("click", function () {
         content.classList.toggle("open");
         collapsible.classList.toggle("active");
         localStorage.setItem("favoritesOpen", content.classList.contains("open"));
@@ -177,7 +178,7 @@
         mylistCollapsible.classList.add("active");
       }
       // 開閉イベントを監視
-      mylistCollapsible.addEventListener("click", function() {
+      mylistCollapsible.addEventListener("click", function () {
         mylistContent.classList.toggle("open");
         mylistCollapsible.classList.toggle("active");
         localStorage.setItem("mylistsOpen", mylistContent.classList.contains("open"));
@@ -186,4 +187,5 @@
 
   </script>
 </body>
+
 </html>
