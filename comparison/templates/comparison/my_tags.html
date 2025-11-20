@@ -1,0 +1,42 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>タグ一覧</title>
+  <link rel="stylesheet" href="{% static 'comparison/user_mypage_style/my_tags_style.css' %}">
+</head>
+
+<body>
+  <div class="container">
+    <h2>あなたのタグ一覧</h2>
+    <ul>
+      {% for tag in tags %}
+      <li id="tag-{{ tag.id }}">
+        <strong>{{ tag.role }}:</strong> {{ tag.name }}
+        <div class="works">
+          適用作品：
+          {% for wt in tag.user_work_tags %}
+          <span>{{ wt.work.title }}</span>{% if not forloop.last %}, {% endif %}
+          {% endfor %}
+        </div>
+        <a href="{% url 'comparison:edit_tag' tag.id %}">編集</a>
+        <form method="post" action="{% url 'comparison:delete_tag' tag.id %}" style="display:inline">
+          {% csrf_token %}
+          <button type="submit" onclick="return confirm('本当に削除しますか？')">削除</button>
+        </form>
+      </li>
+      {% empty %}
+      <li>タグはまだ登録されていません。</li>
+      {% endfor %}
+    </ul>
+
+    <div class="footer-links">
+      <a href="{% url 'comparison:mypage' %}">マイページに戻る</a>|
+      <a href="{% url 'comparison:index' %}">トップページに戻る</a>
+    </div>
+  </div>
+</body>
+
+</html>

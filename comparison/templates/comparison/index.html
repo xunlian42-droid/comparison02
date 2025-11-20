@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% load static %}
+
+
+<head>
+  <meta charset="UTF-8">
+  <title>アニメ配信比較サイト</title>
+  <link rel="stylesheet" href="{% static 'comparison/index_style.css' %}">
+  <style>
+
+  </style>
+  <script>
+    const ALL_TAGS_URL = "{% url 'comparison:all_tags' %}";
+  </script>
+</head>
+
+<body>
+  <a href="{% url 'home:index' %}">ホームに戻る</a> |
+  <a href="{% url 'login' %}">ログイン</a> |
+  <a href="{% url 'comparison:register' %}">新規登録</a> |
+  <a href="{% url 'comparison:mypage' %}">マイページ</a>
+
+  <h1>配信作品比較</h1>
+  <!-- 検索フォーム -->
+  <!--  -->
+  <form class="search-bar" id="search-form" onsubmit="return false;">
+    <input type="text" id="search-input" placeholder="検索語（スペース区切りでAND検索）">
+    <input type="text" id="exclude-input" placeholder="除外語（スペース区切り）">
+    <button type="submit">検索</button>
+    <button type="button" id="reset-btn">リセット</button>
+  </form>
+  <div class="result-count" id="result-count"></div>
+  <ul id="result-list">
+    <li><a href="{% url 'comparison:01_a' %}">ア行の作品比較</a></li>
+    <li><a href="{% url 'comparison:02_ka' %}">カ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:03_sa' %}">サ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:04_ta' %}">タ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:05_na' %}">ナ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:06_ha' %}">ハ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:07_ma' %}">マ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:08_ya' %}">ヤ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:09_ra' %}">ラ行の作品比較</a></li>
+    <li><a href="{% url 'comparison:10_wa' %}">ワ行の作品比較</a></li>
+  </ul>
+
+  <!-- タグ検索フォーム -->
+  <form class="tag-search-bar" id="tag-search-form">
+    <label class="tag-search" for="tag-input">タグ検索</label><br>
+    <input type="text" id="tag-input" placeholder="役職:名前を入力"><br><br>
+
+    <input type="text" id="tag-exclude-input" placeholder="除外したい語句"><br><br>
+
+    <button type="submit">検索</button>
+    <button type="button" id="tag-reset-btn">リセット</button>
+  </form>
+
+  <ul id="tag-suggestions"></ul>
+
+
+
+  <button id="openTagPopup" data-url="{% url 'comparison:tag_popup' %}">タグ一覧を表示</button>
+  <!-- onclick="openTagPopup()" -->
+
+  <hr>
+
+  <h3>タグの検索結果</h3>
+  <p id="tag-result-count"></p>
+  <ul id="tag-result-list"></ul>
+
+
+
+  <script src="{% static 'comparison/index_script.js' %}"></script>
+</body>
+
+</html>

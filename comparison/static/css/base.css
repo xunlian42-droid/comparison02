@@ -1,0 +1,239 @@
+/* ページ全体 */
+body {
+    background-color: #e6f7ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    padding-top: var(--header-height);
+}
+
+:root {
+  --header-height: 70px;
+}
+
+header.bg-dark {
+  height: var(--header-height);
+}
+
+
+
+/* ヘッダー部分 */
+.bg-dark {
+    background-color: #007acc !important;
+    padding: 15px 0;
+    margin-bottom: 30px;
+    border-radius: 0 0 10px 10px;
+    margin: auto;
+    width: 100%;
+    top: 0;            /* ページの最上部に配置 */
+    left: 0;
+
+}
+
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    top: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between; /* 左右に分ける */
+  align-items: center;            /* 縦方向中央揃え */
+}
+
+/* コンテンツ枠 */
+.container.mt-4 {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+
+    margin: 40px auto;          /* 上下に余白を追加 */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    padding: 50px 50px;         /* 内側の余白を広げる（上下左右） */
+    display: block;             /* gridではなく通常のblockに戻す */
+    min-height: calc(100vh - 120px); /* ヘッダーや余白分を引いて高さ確保 */
+
+}
+
+
+
+
+
+.h1 {
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #007acc;
+    margin-bottom: 20px;
+}
+
+
+
+.h2 {
+    font-size: 1.8em;
+    color: #007acc;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 5px;
+}
+
+.h3 {
+    font-size: 1.5em;
+    color: #007acc;
+    margin-bottom: 12px;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 4px;
+}
+
+
+
+
+
+.btn-outline-light {
+    background-color: transparent;
+    color: #007acc;
+    border: 2px solid #ffffff;
+    padding: 6px 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav a:hover {
+    background-color: #007acc;
+    text-decoration: underline;
+}
+.btn-outline-light:hover {
+    background-color: #007acc;
+    color: #ffffff;
+}
+
+.nav {
+    color: #007acc;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+
+.mylist_form {
+    display: inline;
+    margin-left: 15px;
+}
+
+/* マイリストタイトル */
+.your_mylists {
+    color: #3399ff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 5px;
+}
+
+/* マイリストセクション */
+.mylists-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.mylists-section li {
+    background: #f9fcff;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #b3d9ff;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
+}
+
+
+.line-icon {
+  color: #00c300; /* LINEのブランドカラー */
+}
+
+
+
+/* アカウント操作（ページ最下部） */
+.account-actions {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #b3d9ff;
+}
+
+.account-actions a {
+    color: #007acc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.account-actions a:hover {
+    text-decoration: underline;
+}
+
+/* ボタン共通 */
+button {
+    background-color: #4da6ff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3399ff;
+}
+
+/* 危険操作ボタン */
+.danger-button {
+    background-color: #ff4d4d;
+}
+
+.danger-button:hover {
+    background-color: #e60000;
+}
+
+/* 開閉用のスタイル */
+.collapsible {
+    cursor: pointer;
+    user-select: none;
+}
+
+.collapsible::after {
+    content: " ▼";
+    font-size: 0.8em;
+    color: #007acc;
+}
+
+.collapsible.active::after {
+    content: " ▲";
+}
+
+.content-section {
+    display: none;
+    margin-top: 10px;
+}
+
+.content-section.open {
+    display: block;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #b3d9ff;
+    margin: 10px 0;
+}

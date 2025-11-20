@@ -1,0 +1,17 @@
+<a href="{% url 'home:index' %}">ホームに戻る</a>
+<hr>
+<p>class BmiRecord(models.Model)と連携したBmiRecordForm</p>
+<hr>
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">計算・データ保存</button>
+</form>
+
+{% if submitted %}
+<hr>
+<h2>{{ record.simei }}さんのBMI結果</h2>
+<p>身長: {{ record.height }} cm</p>
+<p>体重: {{ record.weight }} kg</p>
+<p><strong>BMI: {{ bmi }}</strong></p>
+{% endif %}

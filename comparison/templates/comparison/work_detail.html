@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <title>作品詳細</title>
+  <link rel="stylesheet" href="{% static 'comparison/user_mypage_style/work_detail_style.css' %}">
+</head>
+
+<body>
+  <div class="container">
+    <h2>{{ work.title }}</h2>
+
+    <p>
+      {% with url=work.get_comparison_url %}
+      {% if url is not None %}
+      <a href="{{ url }}">比較表ページでこの作品タイトルを見る</a>
+      {% else %}
+      <span>比較表ページが見つかりません。</span>
+      {% endif %}
+      {% endwith %}
+    </p>
+
+    {% if work.description %}
+    <p>{{ work.description }}</p>
+    {% endif %}
+
+    <h3>この作品に紐づくタグ</h3>
+    <ul>
+      {% for tag in tags %}
+      <li>（{{ tag.role }}）{{ tag.name }}</li>
+      {% empty %}
+      <li>タグはまだ登録されていません。</li>
+      {% endfor %}
+    </ul>
+
+    {% if is_favorited %}
+    <p>お気に入り登録済み</p>
+    <form method="post" action="{% url 'comparison:remove_favorite_by_work' work.id %}">
+      {% csrf_token %}
+      <button type="submit">お気に入りから削除</button>
+    </form>
+    {% else %}
+    <form method="post" action="{% url 'comparison:add_favorite' work.id %}">
+      {% csrf_token %}
+      <button type="submit">お気に入りに追加</button>
+    </form>
+    {% endif %}
+
+    <p><a href="{% url 'comparison:mypage' %}">マイページに戻る</a></p>
+  </div>
+</body>
+
+</html>

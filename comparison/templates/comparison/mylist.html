@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}マイリスト詳細 - {{ mylist.name }}{% endblock %}
+{% block content %}
+<h2 class="h2">{{ mylist.name }}</h2>
+<p>{{ mylist.description }}</p>
+
+{% if mylist.is_public %}
+  <p>
+    <span class="badge bg-success">公開中</span>
+    <!-- X(Twitter)共有リンク -->
+    <a href="https://twitter.com/share?url={{ request.build_absolute_uri }}&text={{ mylist.name }}" 
+       target="_blank" class="ms-2">
+       <i class="bi bi-twitter"></i> Xで共有
+    </a>
+    <!-- LINE共有リンク -->
+    <a href="https://social-plugins.line.me/lineit/share?url={{ request.build_absolute_uri }}" 
+       target="_blank" class="ms-2">
+       <i class="bi bi-chat-dots line-icon"></i> LINEで共有
+    </a>
+  </p>
+{% else %}
+  <p><span class="badge bg-secondary">非公開</span></p>
+{% endif %}
+
+<h3 class="h3">作品一覧</h3>
+<ul>
+  {% for item in mylist.items.all %}
+    <li>
+      {% if item.work.comparison_page and item.work.id_for_anchor %}
+        <!-- 比較表ページの該当欄へリンク -->
+        <a href="{% url 'comparison:comparison_page' page=item.work.comparison_page %}#{{ item.work.id_for_anchor }}">
+          {{ item.work.title }}
+        </a>
+      {% else %}
+        {{ item.work.title }}
+      {% endif %}
+      <a href="{% url 'comparison:remove_from_mylist' mylist.pk item.work.pk %}" class="btn btn-sm btn-outline-danger">削除</a>
+    </li>
+  {% empty %}
+    <li>作品がまだ追加されていません。</li>
+  {% endfor %}
+</ul>
+
+<hr>
+<a href="{% url 'comparison:delete_mylist' mylist.pk %}" class="btn btn-danger">このマイリストを削除</a>
+{% endblock %}

@@ -1,0 +1,169 @@
+body {
+    margin: auto;
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #fdfdfd;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+}
+
+.mark01 {
+    width: 95%;
+    margin: auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+
+    
+    border-collapse: separate;
+    border-spacing: 0;
+
+    border-radius: 30px;
+    overflow: hidden;
+
+}
+
+.mark02 {
+    border-collapse: collapse;
+    width: 95%;
+    margin: 4% auto;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.6%;
+    text-align: center;
+}
+
+th {
+    background: linear-gradient(to right, #f0f0f0, #e8e8e8);
+    font-weight: bold;
+    color: #444;
+}
+
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tr:hover {
+    background-color: #f0f8ff;
+}
+
+a.title-link {
+    color: #0366d6;
+    font-weight: 500;
+    text-decoration: none;
+    position: relative;
+    transition: color 0.2s;
+}
+
+a.title-link::after {
+    content: " ";
+    margin-left: 6px;
+    font-size: 0.9rem;
+    opacity: 0.6;
+}
+
+a.title-link:hover {
+    color: #d6336c;
+    text-decoration: underline;
+}
+
+.filter-bar {
+    text-align: center;
+    margin: 1rem auto;
+}
+
+.filter-btn {
+    background: #eee;
+    border: none;
+    padding: 0.4rem 1rem;
+    margin: 0.2rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.2s;
+}
+
+.filter-btn:hover {
+    background: #ddd;
+}
+
+.filter-btn.active {
+    background: #0366d6;
+    color: #fff;
+}
+
+#modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 1000;
+}
+
+#modal-content {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    width: 80%;
+    max-width: 600px;
+    max-height: 80vh;
+    padding: 1rem;
+    border-radius: 6px;
+    overflow-y: auto;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+#close-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    font-size: 1.2rem;
+    background: none;
+    border: none;
+    color: #666;
+    cursor: pointer;
+}
+
+#close-btn:hover {
+    color: #000;
+}
+
+.custom-tooltip {
+    margin: auto;
+    padding: 3%;
+}
+
+.highlight {
+  animation: flash 3s ease-out both;
+}
+
+
+@keyframes flash {
+  0%   { background-color: yellow; }
+  50%  { background-color: gold; }
+  100% { background-color: transparent; }
+}
+
+.fav-cell {
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 4px;
+}
+
+.fav-cell button {
+  color: #0800ff;
+  background-color: #eee;
+  border: 1px solid #eee;
+  padding: 4px 8px;
+  border-radius: 20px;
+}
+
+.fav-cell button:hover {
+  background-color: #00c3ff;
+}

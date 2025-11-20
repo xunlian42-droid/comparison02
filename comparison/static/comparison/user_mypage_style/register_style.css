@@ -1,0 +1,61 @@
+/* ページ全体を中央寄せ */
+body {
+  display: flex;
+  justify-content: center;   /* 横方向中央 */
+  align-items: center;       /* 縦方向中央 */
+  min-height: 100vh;         /* 画面全体の高さを確保 */
+  margin: 0;
+  background-color: #f0f8ff; /* 背景色 */
+}
+
+/* コンテンツ枠 */
+.container {
+  width: 100%;
+  max-width: 500px;
+  background-color: #ffffff;
+  padding: 40px;             /* 内側余白を広めに */
+  margin: 20px;              /* 外側余白（上下左右） */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+  text-align: center;
+}
+
+/* フォーム要素 */
+form {
+  margin-top: 20px;
+  text-align: left;          /* 入力欄は左寄せ */
+}
+
+/* ボタン */
+button {
+  background-color: #4da6ff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+button:hover {
+  background-color: #3399ff;
+}
+
+/* 薄い説明文（ユーザー名やパスワード条件用） */
+.helptext {
+  font-size: 0.9em;
+  color: #777;               /* グレーで薄く表示 */
+  margin-top: 5px;
+  display: block;
+}
+
+li {
+  color: #777;        /* グレーで薄く */
+  font-size: 0.9em;   /* 少し小さめに */
+}
+
+h1 {
+  text-align: center;
+  color: #007acc;
+  margin-bottom: 20px;
+}

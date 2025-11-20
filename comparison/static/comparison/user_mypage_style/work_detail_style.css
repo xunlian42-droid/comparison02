@@ -1,0 +1,92 @@
+/* ページ全体 */
+body {
+    background-color: #e6f7ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* コンテンツ枠 */
+.container {
+    width: 100%;
+    max-width: 800px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* 作品タイトル */
+h2 {
+    text-align: center;
+    color: #007acc;
+    margin-bottom: 15px;
+}
+
+/* 説明文 */
+p {
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* タグ見出し */
+h3 {
+    color: #3399ff;
+    margin-top: 25px;
+    margin-bottom: 10px;
+}
+
+/* タグ一覧 */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+ul li {
+    background: #f9fcff;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid #b3d9ff;
+}
+
+/* ボタン共通 */
+button {
+    background-color: #4da6ff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3399ff;
+}
+
+/* 危険操作ボタン */
+.danger-button {
+    background-color: #ff4d4d;
+}
+
+.danger-button:hover {
+    background-color: #e60000;
+}
+
+/* 戻るリンク */
+a {
+    color: #007acc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

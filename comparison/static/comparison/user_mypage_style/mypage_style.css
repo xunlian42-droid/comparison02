@@ -1,0 +1,214 @@
+/* ページ全体 */
+body {
+    background-color: #e6f7ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+}
+
+/* コンテンツ枠 */
+.container {
+    width: 100%;
+    max-width: 900px;
+    background-color: #ffffff;
+    padding: 30px 40px;
+    margin-top: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+}
+
+/* ユーザー名（ページ上部） */
+.username {
+    text-align: center;
+    color: #007acc;
+    margin-top: 20px;
+    margin-bottom: 30px;
+    font-size: 1.8em;
+    font-weight: bold;
+}
+
+/* タグ一覧タイトル */
+.your_tag {
+    color: #3399ff;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 5px;
+}
+
+/* タグリスト */
+.tag-legend ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.tag-legend li {
+    background: #f9fcff;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #b3d9ff;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
+}
+
+/* 適用作品表示 */
+.works {
+    font-size: 0.9em;
+    color: #555;
+    margin-top: 5px;
+}
+
+/* タグ編集・削除 */
+.tag-actions {
+    margin-top: 8px;
+}
+
+.tag-actions a {
+    color: #007acc;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.tag-actions a:hover {
+    text-decoration: underline;
+}
+
+/* お気に入りタイトル */
+.your_favorites {
+    color: #3399ff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 5px;
+}
+
+/* お気に入りリスト */
+.favorites-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.favorites-section li {
+    background: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 6px;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
+}
+
+.missing-work {
+    color: #999;
+    font-style: italic;
+}
+
+.mylist_form {
+    display: inline;
+    margin-left: 15px;
+}
+
+/* マイリストタイトル */
+.your_mylists {
+    color: #3399ff;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #b3d9ff;
+    padding-bottom: 5px;
+}
+
+/* マイリストセクション */
+.mylists-section ul {
+    list-style-type: none;
+    padding-left: 0;
+    margin: 0;
+}
+
+.mylists-section li {
+    background: #f9fcff;
+    margin-bottom: 12px;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #b3d9ff;
+    box-shadow: 0 2px 6px rgba(0, 123, 255, 0.1);
+}
+
+
+
+/* アカウント操作（ページ最下部） */
+.account-actions {
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 20px;
+    border-top: 2px solid #b3d9ff;
+}
+
+.account-actions a {
+    color: #007acc;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.account-actions a:hover {
+    text-decoration: underline;
+}
+
+/* ボタン共通 */
+button {
+    background-color: #4da6ff;
+    color: white;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #3399ff;
+}
+
+/* 危険操作ボタン */
+.danger-button {
+    background-color: #ff4d4d;
+}
+
+.danger-button:hover {
+    background-color: #e60000;
+}
+
+/* 開閉用のスタイル */
+.collapsible {
+    cursor: pointer;
+    user-select: none;
+}
+
+.collapsible::after {
+    content: " ▼";
+    font-size: 0.8em;
+    color: #007acc;
+}
+
+.collapsible.active::after {
+    content: " ▲";
+}
+
+.content-section {
+    display: none;
+    margin-top: 10px;
+}
+
+.content-section.open {
+    display: block;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #b3d9ff;
+    margin: 10px 0;
+}

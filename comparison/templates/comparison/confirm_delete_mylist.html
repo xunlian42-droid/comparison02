@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+<h2 class="h2">マイリスト削除確認</h2>
+<p>「{{ mylist.name }}」を削除してもよろしいですか？</p>
+
+<form method="post">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-danger">削除する</button>
+</form>
+<form method="post" action="{% url 'comparison:mylist_detail' mylist.pk %}" style="display:inline;">
+  {% csrf_token %}
+  <button type="submit" class="btn btn-secondary">キャンセル</button>
+</form>
+{% endblock %}

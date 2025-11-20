@@ -1,0 +1,15 @@
+<h2>お気に入り作品一覧</h2>
+<ul>
+  {% for fav in favorites %}
+    <li>
+      <a href="{% url 'comparison:work_detail' fav.work.id %}">{{ fav.work.title }}</a>
+      <form method="post" action="{% url 'comparison:remove_favorite' fav.id %}" style="display:inline;">
+        {% csrf_token %}
+        <button type="submit">削除</button>
+      </form>
+    </li>
+  {% empty %}
+    <li>お気に入りはまだ登録されていません。</li>
+  {% endfor %}
+</ul>
+<a href="{% url 'comparison:index' %}">トップページに戻る</a>

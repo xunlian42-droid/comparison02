@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ja">
+{% load static %}
+<head>
+  <meta charset="UTF-8">
+  <title>{% block title %}配信サイト比較表{% endblock %}</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+
+  <!-- 共通CSS -->
+  <link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+  {% block extra_head %}{% endblock %}
+</head>
+<body>
+  <header class="bg-dark fixed-top">
+    <div class="container">
+      <h1 class="h1">MyList</h1>
+      <nav class="nav">
+        <form method="post" action="{% url 'comparison:mypage' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" class="btn-outline-light">マイページ</button>
+        </form>
+        <form method="post" action="{% url 'comparison:index' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" class="btn-outline-light">トップ</button>
+        </form>
+        
+        <form method="post" action="{% url 'logout' %}" style="display:inline;">
+          {% csrf_token %}
+          <button type="submit" class="btn-outline-light">ログアウト</button>
+        </form>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container mt-4">
+    {% block content %}
+    <!-- 各ページ固有の内容 -->
+    {% endblock %}
+  </main>
+
+  <!-- <footer class="bg-light text-center p-3 mt-4">
+    <p></p>
+  </footer> -->
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+  <!-- 共通JS -->
+  <!-- <script src="{% static 'js/base.js' %}"></script> -->
+
+  {% block extra_js %}{% endblock %}
+</body>
+</html>

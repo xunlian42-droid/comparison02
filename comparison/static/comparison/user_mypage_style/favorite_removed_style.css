@@ -1,0 +1,51 @@
+/* ページ全体 */
+body {
+    background-color: #e6f7ff;
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* メッセージボックス */
+.message-box {
+    background-color: #fff;
+    border: 2px solid #ff4d4d;
+    /* 赤系で削除の雰囲気 */
+    border-radius: 10px;
+    padding: 30px 40px;
+    text-align: center;
+    box-shadow: 0 4px 12px rgba(255, 0, 0, 0.2);
+    max-width: 600px;
+}
+
+/* 見出し */
+.message-box h2 {
+    color: #cc0000;
+    /* 強めの赤で削除を強調 */
+    margin-bottom: 20px;
+    font-size: 1.4em;
+}
+
+/* 戻るボタン */
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+/* 通常ボタン（青系で安心感） */
+.btn-primary {
+    background-color: #4da6ff;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #3399ff;
+}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>ユーザー登録</title>
+</head>
+<body>
+    <h1>ユーザー登録フォーム</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">登録</button>
+    </form>
+</body>
+</html>

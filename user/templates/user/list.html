@@ -1,0 +1,16 @@
+<a href="{% url 'home:index' %}">ホームに戻る</a>
+<hr>
+<h2>登録済みユーザー一覧</h2>
+<ul>
+    {% for r in records %}
+    <li>{{ r.username }}: {{ r.email }}</li>
+    {% endfor %}
+</ul>
+
+{% if messages %}
+  <ul>
+    {% for message in messages %}
+      <li>{{ message }}</li>
+    {% endfor %}
+  </ul>
+{% endif %}
