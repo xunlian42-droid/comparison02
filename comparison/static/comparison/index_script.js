@@ -148,8 +148,8 @@ async function doTagSearch() {
   const query = document.getElementById("tag-input").value.trim();
   const excludeQuery = document.getElementById("tag-exclude-input").value.trim();
 
-  const keywords = query ? query.split(/\s+/).map(w => w.replace(/\s+/g, "")) : [];
-  const excludeKeywords = excludeQuery ? excludeQuery.split(/\s+/).map(w => w.replace(/\s+/g, "")) : [];
+  const keywords = query ? query.split(/[\s　]+/).map(w => w.replace(/[\s　]+/g, "")) : [];
+  const excludeKeywords = excludeQuery ? excludeQuery.split(/[\s　]+/).map(w => w.replace(/[\s　]+/g, "")) : [];
 
 
   if (Object.keys(tagIndex).length === 0) {
@@ -174,13 +174,13 @@ async function doTagSearch() {
 
   // 作品ごとに検索語と除外語を判定
   for (const work of workMap.values()) {
-    const hasAnyTag = keywords.some(word =>
+    const hasAllTags = keywords.every(word =>
       work.tagKeys.some(tag => tag.includes(word))
     );
     const hasExclude = excludeKeywords.some(word =>
       work.tagKeys.some(tag => tag.includes(word))
     );
-    if (hasAnyTag && !hasExclude) {
+    if (hasAllTags && !hasExclude) {
       results.push(work);
     }
   }
