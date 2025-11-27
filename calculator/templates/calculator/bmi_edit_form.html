@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- bmi_edit_form.html 編集画面 -->
 <h2>BMI情報の編集</h2>
 <form method="post">
@@ -5,4 +6,13 @@
   {{ form.as_p }}
   <button type="submit">更新</button>
 </form>
+=======
+<!-- bmi_edit_form.html 編集画面 -->
+<h2>BMI情報の編集</h2>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">更新</button>
+</form>
+>>>>>>> e4bf81d (2025_1127_更新)
 <a href="{% url 'calculator:bmi_record_list_edit_delete' %}">一覧に戻る</a>

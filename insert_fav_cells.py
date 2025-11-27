@@ -42,6 +42,15 @@ def inject_work_id_to_title_link(a_tag):
     a_tag['data-work-id'] = str(work_id)
     return True
 
+import re
+
+def normalize_text(text: str) -> str:
+    # 改行・タブをスペースに
+    text = re.sub(r'[\n\r\t]+', ' ', text)
+    # 連続スペースを1つに
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
+
 def process_file(input_path, output_path):
     with open(input_path, 'r', encoding='utf-8') as f:
         soup = BeautifulSoup(f, 'html.parser')
@@ -57,8 +66,11 @@ def process_file(input_path, output_path):
             changed_rows += 1
 
         a_tag = tr.find('a', class_='title-link')
-        if a_tag and inject_work_id_to_title_link(a_tag):
-            updated_links += 1
+        if a_tag:
+            # テキストを正規化
+            a_tag.string = normalize_text(a_tag.get_text())
+            if inject_work_id_to_title_link(a_tag):
+                updated_links += 1
 
     with open(output_path, 'w', encoding='utf-8') as f:
         f.write(str(soup))
@@ -70,13 +82,14 @@ def process_file(input_path, output_path):
 # 全ファイルを処理
 for fname in filenames:
     input_path = os.path.join(BASE_DIR, fname)
-    # 出力ファイルを同じパスにする（上書き保存）
-    output_path = input_path
+    output_path = os.path.join(BASE_DIR, fname.replace('_with_links.html', '_with_links_with_fav.html'))
 
+    # 出力ファイルを同じパスにする（上書き保存）
+    # output_path = input_path
     if not os.path.exists(input_path):
         print(f'⚠️ スキップ（ファイルなし）: {input_path}')
         continue
-
     process_file(input_path, output_path)
+
 
 print('🎉 全ファイルの処理が完了しました')

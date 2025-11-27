@@ -7,14 +7,41 @@ from glob import glob
 from pathlib import Path
 from bs4 import BeautifulSoup
 
+# def safe_anchor(s: str) -> str:
+#     if not s:
+#         return ""
+#     s = str(s).strip()
+#     s = re.sub(r'\s+', '-', s)
+#     s = re.sub(r'[\/#?&%]', '-', s)
+#     s = re.sub(r'[<>:"\'\[\]\(\)\{\}@!,$\^=+;：，。、・]', '', s)
+#     return s if s else 'work-' + re.sub(r'[^0-9a-zA-Z_-]', '', str(hash(s)))
+
+import hashlib
+
 def safe_anchor(s: str) -> str:
     if not s:
         return ""
     s = str(s).strip()
-    s = re.sub(r'\s+', '-', s)
-    s = re.sub(r'[\/#?&%]', '-', s)
-    s = re.sub(r'[<>:"\'\[\]\(\)\{\}@!,$\^=+;：，。、・]', '', s)
-    return s if s else 'work-' + re.sub(r'[^0-9a-zA-Z_-]', '', str(hash(s)))
+    # 空白を _ に
+    s = re.sub(r'\s+', '_', s)
+    # 特殊記号を _ に
+    s = re.sub(r'[\/#?&%\-]', '_', s)  # ← "-" もここで _ に変換
+    # その他禁止文字を削除ではなく _ に
+    s = re.sub(r'[<>:"\'\[\]\(\)\{\}@!,$\^=+;：，。、・]', '_', s)
+    # 連続する _ を1つにまとめる
+    s = re.sub(r'_+', '_', s)
+    # 先頭末尾の _ は残す（strip はしない）
+    if not s:
+        # フォールバック: 安定したハッシュ値を利用
+        s = 'work_' + hashlib.md5(str(s).encode()).hexdigest()[:8]
+    return s
+
+def normalize_title(text: str) -> str:
+    # 改行やタブをスペースに
+    text = re.sub(r'[\n\r\t]+', ' ', text)
+    # 連続スペースを1つに
+    text = re.sub(r'\s+', ' ', text)
+    return text.strip()
 
 def scan_file(path: Path):
     results = {}
@@ -27,7 +54,7 @@ def scan_file(path: Path):
         if work_id:
             title = div.find('h3')
             if title:
-                title_text = title.get_text().strip()
+                title_text = normalize_title(title.get_text())
                 anchor = safe_anchor(work_id)
                 results[work_id] = {"raw": title_text, "anchor": anchor}
 
@@ -38,7 +65,7 @@ def scan_file(path: Path):
             a = tr.find('a', class_='title-link')
             if a:
                 data_id = a.get('data-id') or a.get('id')
-                text_key = (a.get_text() or '').strip()
+                text_key = normalize_title(a.get_text() or '')
                 key = data_id or text_key
                 if key:
                     anchor = safe_anchor(key)
