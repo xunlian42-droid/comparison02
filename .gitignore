@@ -1,29 +1,20 @@
-# Virtualenv
+# Python
+__pycache__/
+*.pyc
+
+# Django
+db.sqlite3
+
+# Virtual environment
 venv/
 env/
 cp_env/
-
-# Python bytecode
-__pycache__/
-*.py[cod]
-
-# Django stuff
-*.log
-*.pot
-*.pyc
-*.sqlite3
-db.sqlite3
-media/
+.env*
 staticfiles/
+media/
 
-# Environment variables
-.env
-.env.*
-
-# IDEs
-.vscode/
-.idea/
-
-# OS files
+# macOS
 .DS_Store
-Thumbs.db
+
+# Logs
+*.log

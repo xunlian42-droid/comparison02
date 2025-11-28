@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="ja">
 {% load static %}
+
 <head>
   <meta charset="UTF-8">
   <title>{% block title %}配信サイト比較表{% endblock %}</title>
@@ -14,6 +15,7 @@
 
   {% block extra_head %}{% endblock %}
 </head>
+
 <body>
   <header class="bg-dark fixed-top">
     <div class="container">
@@ -27,7 +29,7 @@
           {% csrf_token %}
           <button type="submit" class="btn-outline-light">トップ</button>
         </form>
-        
+
         <form method="post" action="{% url 'logout' %}" style="display:inline;">
           {% csrf_token %}
           <button type="submit" class="btn-outline-light">ログアウト</button>
@@ -54,4 +56,5 @@
 
   {% block extra_js %}{% endblock %}
 </body>
+
 </html>

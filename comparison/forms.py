@@ -17,8 +17,6 @@ from .models import MyList
 class MyListForm(forms.ModelForm):
     class Meta:
         model = MyList
-<<<<<<< HEAD
+
         fields = ["name", "description", "is_public"]
-=======
-        fields = ["name", "description", "is_public"]
->>>>>>> e4bf81d (2025_1127_更新)
+

@@ -1,4 +1,4 @@
-s/* ページ全体 */
+/* ページ全体 */
 body {
     background-color: #e6f7ff;
     font-family: 'Segoe UI', sans-serif;
@@ -11,11 +11,11 @@ body {
 }
 
 :root {
-  --header-height: 70px;
+    --header-height: 70px;
 }
 
 header.bg-dark {
-  height: var(--header-height);
+    height: var(--header-height);
 }
 
 
@@ -28,7 +28,8 @@ header.bg-dark {
     border-radius: 0 0 10px 10px;
     margin: auto;
     width: 100%;
-    top: 0;            /* ページの最上部に配置 */
+    top: 0;
+    /* ページの最上部に配置 */
     left: 0;
 
 }
@@ -46,9 +47,11 @@ header.bg-dark {
 }
 
 header .container {
-  display: flex;
-  justify-content: space-between; /* 左右に分ける */
-  align-items: center;            /* 縦方向中央揃え */
+    display: flex;
+    justify-content: space-between;
+    /* 左右に分ける */
+    align-items: center;
+    /* 縦方向中央揃え */
 }
 
 /* コンテンツ枠 */
@@ -57,12 +60,16 @@ header .container {
     max-width: 900px;
     background-color: #ffffff;
 
-    margin: 40px auto;          /* 上下に余白を追加 */
+    margin: 40px auto;
+    /* 上下に余白を追加 */
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
-    padding: 50px 50px;         /* 内側の余白を広げる（上下左右） */
-    display: block;             /* gridではなく通常のblockに戻す */
-    min-height: calc(100vh - 120px); /* ヘッダーや余白分を引いて高さ確保 */
+    padding: 50px 50px;
+    /* 内側の余白を広げる（上下左右） */
+    display: block;
+    /* gridではなく通常のblockに戻す */
+    min-height: calc(100vh - 120px);
+    /* ヘッダーや余白分を引いて高さ確保 */
 
 }
 
@@ -113,6 +120,7 @@ header .container {
     background-color: #007acc;
     text-decoration: underline;
 }
+
 .btn-outline-light:hover {
     background-color: #007acc;
     color: #ffffff;
@@ -159,7 +167,8 @@ header .container {
 
 
 .line-icon {
-  color: #00c300; /* LINEのブランドカラー */
+    color: #00c300;
+    /* LINEのブランドカラー */
 }
 
 

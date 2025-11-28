@@ -82,10 +82,10 @@ def process_file(input_path, output_path):
 # 全ファイルを処理
 for fname in filenames:
     input_path = os.path.join(BASE_DIR, fname)
-    output_path = os.path.join(BASE_DIR, fname.replace('_with_links.html', '_with_links_with_fav.html'))
+    # output_path = os.path.join(BASE_DIR, fname.replace('_with_links.html', '_with_links_with_fav.html'))
 
     # 出力ファイルを同じパスにする（上書き保存）
-    # output_path = input_path
+    output_path = input_path
     if not os.path.exists(input_path):
         print(f'⚠️ スキップ（ファイルなし）: {input_path}')
         continue
